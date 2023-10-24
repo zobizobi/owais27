@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">USERNAME</label>
+                      <input type="text" class="form-control" id="USERNAME" aria-describedby="emailHelp">
+                     
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">EMAIL</label>
+                      <input type="email" class="form-control" id="EMAIL">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">AGE</label>
+                        <input type="number" class="form-control" id="AGE">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">ADDRESS</label>
+                        <input type="text" class="form-control" id="ADDRESS">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">PASSWORD</label>
+                        <input type="password" class="form-control" id="PASSWORD">
+                      </div>
+                      
+
+                  
+                    <button type="button" class="btn btn-primary" onclick="signup()">SIGNUP</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function signup(){
+            var NAME = document.getElementById("NAME").value;
+            var EMAIL = document.getElementById("EMAIL").value;
+            var AGE = document.getElementById("AGE").value;
+            var ADDRESS = document.getElementById("ADDRESS").value;
+            var PASSWORD= document.getElementById("PASSWORD").value;
+            
+            localStorage.setItem("name1,NAME");
+            localStorage.setItem("email1,EMAIL");
+            localStorage.setItem("age1,AGE");
+            localStorage.setItem("address1,ADDRESS");
+            localStorage.setItem("password1,PASSWORD");
+
+            document.getElementById("NAME").value="";
+            document.getElementById("EMAIL").value="";
+            document.getElementById("AGE").value="";
+            document.getElementById("ADDRESS").value="";
+            document.getElementById("PASSWORD").value="";
+
+        }
+    </script>
+  </body>
+</html>
